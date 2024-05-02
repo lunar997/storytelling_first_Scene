@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "storytelling",
+	"version": "${version}",
+	"name": "StoryTelling",
+	"description": "My StoryMod for First Scene",
+	"authors": [
+		"Lunar997"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/storytelling/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lunar.StoryTelling"
+		],
+		"client": [
+			"net.lunar.StoryTellingClient"
+		],
+		"fabric-datagen": [
+			"net.lunar.StoryTellingDataGenerator"
+		]
+	},
+	"mixins": [
+		"storytelling.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
