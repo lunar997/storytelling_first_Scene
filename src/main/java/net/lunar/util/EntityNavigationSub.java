@@ -13,16 +13,16 @@ public class EntityNavigationSub extends EntityNavigation {
 
     @Override
     protected PathNodeNavigator createPathNodeNavigator(int range) {
-        return null;
+        return super.createPathNodeNavigator(range);
     }
 
     @Override
     protected Vec3d getPos() {
-        return null;
+        return super.getPos();
     }
 
     @Override
     protected boolean isAtValidPosition() {
-        return false;
+        return super.isAtValidPosition();
     }
 }
