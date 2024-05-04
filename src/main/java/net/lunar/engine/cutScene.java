@@ -11,8 +11,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 
-public class CutScene {
-    public static void CutSceneFunction(PlayerEntity player, BlockPos pos, @Nullable BlockPos newPos, float hY, float hP, int length) {
+public class cutScene {
+    public static void cutSceneFunction(PlayerEntity player, BlockPos pos, @Nullable BlockPos newPos, float hY, float hP, int length) {
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
         ServerPlayerEntity ServerPlayer = (ServerPlayerEntity)player;
         BlockPos playerPosBefore = ServerPlayer.getBlockPos();

@@ -4,9 +4,8 @@ import net.lunar.StoryEntities.ModStoryEntities;
 import net.lunar.StoryScenes.FirstCutScene.NPCs.MainHeroNPC.MainHeroNPCEntity;
 import net.lunar.StoryScenes.FirstCutScene.NPCs.ShoneNPC.ShoneNPCEntity;
 import net.lunar.StoryTelling;
-import net.lunar.engine.CutScene;
+import net.lunar.engine.cutScene;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.pathing.Path;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
@@ -23,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class FirstScene {
     public static void firstScene(PlayerEntity player) throws InterruptedException {
         World world = player.getWorld();
-        CutScene.CutSceneFunction(player, new BlockPos(-291, -60, 71), null, -120f, 6f, 15);
+        cutScene.cutSceneFunction(player, new BlockPos(-291, -60, 71), null, -120f, 6f, 15);
         EntityType<MainHeroNPCEntity> main_hero_type = ModStoryEntities.MAIN_HERO_NPC_ENTITY;
         EntityType<ShoneNPCEntity> shone_type = ModStoryEntities.SHONE_NPC_ENTITY;
         MainHeroNPCEntity MAIN_HERO = main_hero_type.create(world);
@@ -36,6 +35,7 @@ public class FirstScene {
         world.spawnEntity(SHONE);
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
             executor.schedule(() -> {
+                StoryTelling.LOGGER.info(new String(String.valueOf(MAIN_HERO.getNavigation())));
                 player.sendMessage(Text.literal("Start Moving"));
                 SHONE.getNavigation().startMovingTo(-283, -63, 64, 0.5f);
                 MAIN_HERO.getNavigation().startMovingTo(-283, -63, 66, 0.5f);
