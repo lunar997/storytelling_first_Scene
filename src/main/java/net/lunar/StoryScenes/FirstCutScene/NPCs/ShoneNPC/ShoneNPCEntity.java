@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 public class ShoneNPCEntity extends PathAwareEntity {
 
-    protected ShoneNPCEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public ShoneNPCEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 }

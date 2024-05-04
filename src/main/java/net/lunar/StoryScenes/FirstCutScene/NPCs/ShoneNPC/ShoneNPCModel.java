@@ -1,7 +1,6 @@
 package net.lunar.StoryScenes.FirstCutScene.NPCs.ShoneNPC;
 
 import net.lunar.StoryEntities.DefaultNPCAnimations;
-import net.lunar.StoryScenes.FirstCutScene.NPCs.ShoneNPC.ShoneNPCEntity;
 import net.minecraft.client.model.Dilation;
 import net.minecraft.client.model.ModelData;
 import net.minecraft.client.model.ModelPart;
